@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 //        Print the prices and list of all products
@@ -34,6 +36,18 @@ public class Main {
         System.out.println("Pancake: $"+ panCakeEarned);
         System.out.println();
         System.out.println("Income: $"+ income);
+
+//        Finding the expense and new income;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Staff expenses:");
+        System.out.print(" > ");
+        int staffExpenses = scanner.nextInt();
+        System.out.println("Other expenses:");
+        System.out.print(" > ");
+        int otherExpenses = scanner.nextInt();
+
+        float netIncome = (income - (staffExpenses + otherExpenses));
+        System.out.println("Net income: $"+netIncome);
 
     }
 }
